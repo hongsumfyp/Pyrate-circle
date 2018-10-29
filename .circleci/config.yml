@@ -20,7 +20,7 @@ jobs:
     steps:
       - checkout
 
-      - run pip(3) install -r requirements.txt
+      - run: pip(3) install -r requirements.txt
         
       - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
       - run: sudo rm -rf /var/lib/apt/lists/*

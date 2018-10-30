@@ -19,13 +19,8 @@ jobs:
 
     steps:
       - checkout
-           
-      - run:
-          name: install dependency
-          command: |
-            python3.6 -m venv .venv
-            source .venv/bin/activate
-            pip install -r requirements.txt
+      - run: pip install mysql-connector-python     
+      - run: pip install -r requirements.txt
         
       - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
       - run: sudo rm -rf /var/lib/apt/lists/*

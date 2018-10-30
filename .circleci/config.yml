@@ -20,6 +20,8 @@ jobs:
     steps:
       - checkout
       
+      - run: pip install --upgrade pip
+      
       - run: pip install --upgrade setuptools
       
       - run: pip install -r requirements.txt
